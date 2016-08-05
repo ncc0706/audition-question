@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<h1 id="java-">Java 常见面试题</h1>
+<h2 id="-">集合</h2>
+<p>Collection是集合顶层接口，已知子接口List、Set、Queue</p>
+<h3 id="list">List</h3>
+<p>List是一个有序集合，可以包含重复元素，提供了索引的访问方式，继承<code>Collection</code>，有两个重要的实现类: ArrayList和LinkedList</p>
+<p><a href="http://www.cnblogs.com/ITtangtang/p/3948555.html">ArrayList的实现原理</a></p>
+<p>ArrayList、LinkedList、Vector都实现了List接口，主要区别在于实现方式不同，不同的操作有不同的效率。</p>
+<ul>
+<li>ArrayList是一个可变大小是数组，当更多的元素加入到ArrayList中，其大小将会动态的增长。内部元素可以直接通过get或set方法进行访问,ArrayList本质上就是数组</li><li>LinkedList是一个双向链表，在添加、删除元素时比ArrayList性能更好，但get、set弱于ArrayList，LinkedList还实现了Queue接口，该接口比List提供了更多的方法......</li><li>Vector和ArrayList类似，但属于强同步类，Vector的所有操作方法被同步了，Vector和ArrayList在更多元素添加进来时会请求更大的空间。Vector每次请求其大小的双倍空间，ArrayList每次对size增长50%。</li></ul>
+<blockquote>
+<p>ArrayList、LinkedList是非线程安全的</p>
+<p>Vector是线程安全的</p>
+</blockquote>
+<p><strong>ArrayList、LinkedList 遍历方式性能分析</strong><br>主要介绍ArrayList和LinkedList这两种list的常用循环遍历方式，各种方式的性能分析。熟悉java的知道，常用的list的遍历方式有以下几种：</p>
+<ol>
+<li><p>for-each</p>
+<pre><code class="lang-java">List&lt;String&gt; testList = new ArrayList&lt;String&gt;();
+ for (String tmp : testList) {    
+   //use tmp;
+}
+</code></pre>
+<p>这种遍历方式是最常用的遍历方式，因为书写比较方便，而且不需要考虑数组越界的问题，Effective-Java中推荐使用此种写法遍历。</p>
+</li><li><p>迭代器方式</p>
+<pre><code class="lang-java">List&lt;String&gt; testList = new ArrayList&lt;String&gt;();
+for (Iterator&lt;String&gt; iterator = testList.iterator(); iterator.hasNext();){
+ //String tmp = iterator.next();
+}
+</code></pre>
+</li><li><p>下标递增或递减循环</p>
+<pre><code class="lang-java">List&lt;String&gt; testList = new ArrayList&lt;String&gt;();
+for (int i = 0; i &lt; testList.size(); i++;){
+ //String tmp = testList.get(i);
+}
+</code></pre>
+</li></ol>
+<p>下标递增或者递减循环是最早接触到的遍历方式，会经常出现数组越界的问题。</p>
+<p>以上三种遍历方式是在使用list时最常用的方式，那么这三种方式在遍历的速度已经性能上又有什么区别呢？我们从数据的底层实现上来进行分析。</p>
+<p>List底层储存都是使用数组来进行存储的，ArrayList是直接通过数组来进行存储，而LinkedList则是使用数组模拟指针，来实现链表的方式，因此从这里就可以总结出，ArrayList在使用下标的方式循环遍历的时候性能最好，通过下标可以直接取数据，速度最快。而LinkedList因为有一层指针，无法直接取到对应的下标，因此在使用下标遍历时就需要计算对应的下面是哪个元素，从指针的头一步一步的走，所以效率就很低。想到指针就会联想到迭代器，迭代器可以指向下一个元素，而迭代器就是使用指针来实现的，因此LinkedList在使用迭代器遍历时会效率最高，迭代器直接通过LinkedList的指针进行遍历，ArrayList在使用迭代器时，因为要通过ArrayList先生成指针，因此效率就会低于下标方式，而for-each又是在迭代器基础上又进行了封装，因此效率会更低一点，但是会很接近迭代器。</p>
+<p>总结：在进行list遍历时，如果是对ArrayList进行遍历，推荐使用下标方式，如果是LinkedList则推荐使用迭代器方式。</p>
+<h3 id="set">Set</h3>
+<p>无序不重复的集合。</p>
+<p>对集合中存在的对象的访问和操作是通过对象的引用进行的，因此集合中不存放重复对象。</p>
+<ul>
+<li>HashSet：哈希表是通过使用称为散列法的机制来存储信息的，元素并没有以某种特定顺序来存放；</li><li>LinkedHashSet：以元素插入的顺序来维护集合的链接表，允许以插入的顺序在集合中迭代；</li><li>TreeSet：提供一个使用树结构存储Set接口的实现，对象以升序顺序存储，访问和遍历的时间很快。</li></ul>
+<h4 id="hashset">HashSet</h4>
+<ol>
+<li>HashSet是采用hash表来实现的。其中的元素没有按顺序排列，add()、remove()以及contains()等方法都是复杂度为O(1)的方法。</li></ol>
+<h4 id="linkedhashset">LinkedHashSet</h4>
+<ol>
+<li>LinkedHashSet 是 HashSet 的子类。</li><li>LinkedHashSet 集合根据元素的 hashCode 值来决定元素的存储位置，但它同时使用链表维护元素的次序，这使得元素看起来是以插入顺序保存的。</li><li>LinkedHashSet 性能插入性能略低于 HashSet，但在迭代访问 Set 里的全部元素时有很好的性能。</li><li>LinkedHashSet 有序但不允许集合元素重复。</li><li>LinkedHashSet介于HashSet和TreeSet之间。它也是一个hash表，但是同时维护了一个双链表来记录插入的顺序。基本方法的复杂度为O(1)。</li></ol>
+<h4 id="treeset">TreeSet</h4>
+<ol>
+<li>TreeSet 是 SortedSet 接口的实现类，TreeSet 可以确保集合元素处于排序状态。</li><li>TreeSet 支持两种排序方法：自然排序和定制排序。默认情况下，TreeSet 采用自然排序。</li><li>TreeSet是采用树结构实现(红黑树算法)。元素是按顺序进行排列，但是add()、remove()以及contains()等方法都是复杂度为O(log (n))的方法。它还提供了一些方法来处理排序的set，如first(), last(), headSet(), tailSet()等等。</li></ol>
+<h2 id="map">Map</h2>
+<p>它有四个实现类,分别是HashMap Hashtable LinkedHashMap 和TreeMap.</p>
+<h3 id="hashmap">HashMap</h3>
+<ol>
+<li>HashMap 是一个最常用的Map,它根据键的HashCode值存储数据,根据键可以直接获取它的值，具有很快的访问速度，遍历时，取得数据的顺序是完全随机的。</li><li>HashMap最多只允许一条记录的键为Null;允许多条记录的值为 Null;</li><li>HashMap不支持线程的同步，即任一时刻可以有多个线程同时写HashMap;可能会导致数据的不一致。如果需要同步，可以用 Collections的synchronizedMap方法使HashMap具有同步的能力，或者使用ConcurrentHashMap</li></ol>
+<h3 id="hashtable">HashTable</h3>
+<p>Hashtable与 HashMap类似,它继承自Dictionary类，不同的是:它不允许记录的键或者值为空;它支持线程的同步，即任一时刻只有一个线程能写Hashtable,因此也导致了 Hashtable在写入时会比较慢。</p>
+<h3 id="linkedhashmap">LinkedHashMap</h3>
+<p>LinkedHashMap 是HashMap的一个子类，保存了记录的插入顺序，在用Iterator遍历LinkedHashMap时，先得到的记录肯定是先插入的.也可以在构造时用带参数，按照应用次数排序。在遍历的时候会比HashMap慢，不过有种情况例外，当HashMap容量很大，实际数据较少时，遍历起来可能会比 LinkedHashMap慢，因为LinkedHashMap的遍历速度只和实际数据有关，和容量无关，而HashMap的遍历速度和他的容量有关。</p>
+<h3 id="treemap">TreeMap</h3>
+<p>TreeMap实现SortMap接口，能够把它保存的记录根据键排序,默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator 遍历TreeMap时，得到的记录是排过序的。好处：一次二分查找就能找到指定范围的数据</p>
+<p><strong>Hashtable和HashMap的区别</strong></p>
+<ol>
+<li>不同主要是历史原因。Hashtable是基于陈旧的Dictionary类的，HashMap是Java 1.2引进的Map接口的一个实现。</li><li>也许最重要的不同是Hashtable的方法是同步的，而HashMap的方法不是</li><li>只有HashMap可以让你将空值作为一个表的条目的key或value。</li></ol>
+<h2 id="javabean-serializable-">javaBean为什么要实现 序列化 Serializable接口？</h2>
+<p>实现 serializable后方便把对象直接存储或者进行网络传输 </p>
+<h2 id="web">WEB</h2>
+<h3 id="redirect-forward-">redirect和forward 区别？？</h3>
+<pre><code>forward方式：
+request.getRequestDispatcher(&quot;/somePage.jsp&quot;).forward(request, response);
+
+redirect方式：
+response.sendRedirect(&quot;/somePage.jsp&quot;);
+</code></pre><p>forward是服务器内部重定向，程序收到请求后重新定向到另一个程序，客户机并不知道。</p>
+<p>redirect则是服务器收到请求后发送一个状态头给客户，客户将再请求一次，这里多了次网络通信的来往。</p>
+<p>forward会将request state ,bean等等信息带往下一个jsp。redirect是送到client端后再一次request,所以资料不被保留.</p>
+<p><strong>总结了一些区别，可以从以下几个方面来看：</strong></p>
+<ul>
+<li>从地址栏显示来说</li></ul>
+<p>forward是服务器请求资源,服务器直接访问目标地址的URL,把那个URL的响应内容读取过来,然后把这些内容再发给浏览器.浏览器根本不知道服务器发送的内容从哪里来的,所以它的地址栏还是原来的地址.</p>
+<p>redirect是服务端根据逻辑,发送一个状态码,告诉浏览器重新去请求那个地址.所以地址栏显示的是新的URL.所以redirect等于客户端向服务器端发出两次request，同时也接受两次response。</p>
+<ul>
+<li>从数据共享来说</li></ul>
+<p>forward:转发页面和转发到的页面可以共享request里面的数据.<br>redirect:不能共享数据.</p>
+<p>redirect不仅可以重定向到当前应用程序的其他资源,还可以重定向到同一个站点上的其他应用程序中的资源,甚至是使用绝对URL重定向到其他站点的资源.forward,方法只能在同一个Web应用程序内的资源之间转发请求.forward 是服务器内部的一种操作.redirect 是服务器通知客户端,让客户端重新发起请求.所以,你可以说 redirect是一种间接的请求, 但是你不能说&quot;一个请求是属于forward还是redirect &quot;</p>
+<ul>
+<li>从运用地方来说</li></ul>
+<p>forward:一般用于用户登陆的时候,根据角色转发到相应的模块.<br>redirect:一般用于用户注销登陆时返回主页面和跳转到其它的网站等.</p>
+<ul>
+<li>从效率来说</li></ul>
+<p>forward:高.<br>redirect:低.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
